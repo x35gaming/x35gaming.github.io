@@ -1,10 +1,10 @@
 var config = {
-                apiKey: "AIzaSyDhfQblwsSixSQVA-Lp1b6STfmsKMBFWpk",
-                authDomain: "unblock-web-project.firebaseapp.com",
-                databaseURL: "https://unblock-web-project.firebaseio.com",
-                projectId: "unblock-web-project",
-                storageBucket: "unblock-web-project.appspot.com",
-                messagingSenderId: "616494762242"
+                apiKey: "AIzaSyBlcxJyIQ5YfkL9-pgnJpoIOvgrCYAu4_E",
+                authDomain: "make-school-great-again.firebaseapp.com",
+                databaseURL: "https://make-school-great-again.firebaseio.com",
+                projectId: "make-school-great-again",
+                storageBucket: "",
+                messagingSenderId: "643533486952"
             };
             firebase.initializeApp(config);
 
@@ -19,9 +19,9 @@ auth.onAuthStateChanged(user => {
 });
 
 function signedIn() {
-  document.getElementById('main-div').classList = 'hidden';
-  document.getElementById('decoy-div').classList = 'visible';
-  document.getElementById("login-div").classList = 'hidden';
+  document.getElementById('googlesignin').classList = 'hidden';
+  document.getElementById('signinsuccess').classList = 'visible';
+  document.getElementById("truediv").classList = 'hidden';
   /*document.getElementById('signedOutNotif').style.display = "none";*/
 }
 
