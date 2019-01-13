@@ -19,7 +19,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
 </head>
 <body>
-	<div id="googlesignin" class="hidden">
+	<div id="googlesignin" class="visible">
 		<h1 id="welcometext">Welcome to School, the most hated place on planet Earth (or should I say the web?)</h1>
 		<div id="firebaseui-auth-container"></div>
 		<p id="plzsignin">Please sign in with Google</p>
@@ -34,7 +34,7 @@
 	</div>
 
 			<!-- Below is the div where you can actually do stuff-->
-	<div id="truediv" class="visible">
+	<div id="truediv" class="hidden">
 		<div class="tab">
         	<button class="tablinks" onclick="openPage(event, 'welcome')">Welcome</button>
         	<button class="tablinks" onclick="openPage(event, 'blocked')">Blocked sites</button>                                                            
