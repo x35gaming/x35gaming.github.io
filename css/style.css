@@ -1,17 +1,31 @@
 body {
-	font-family: 'Ubuntu', sans-serif;
-	padding: 1px;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 1px;
 }
 
 h1 {
-	text-align: center;
-	font-size: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
+#signin-div {
+  text-align: -webkit-center;
+}
 
+#signinbutton {
+  width: 220px;
+}
 
+#signinbutton:hover {
+  cursor: pointer;
+}
 
-/* Tab stuff vv*/
+#plzsignin {
+  text-align: -webkit-center;
+}
+
+/*vv Tab stuff vv*/
+
 .tab {
  overflow: hidden;
  border: 1px solid #ccc;
@@ -43,7 +57,7 @@ h1 {
  border: 1px solid #ccc;
  border-top: none;
  animation: fadeEffect .5s;
- background-color: #f0f8ff4a;
+ background-color: #f4f8fd2e;
  
 }
 
@@ -98,8 +112,8 @@ h1 {
 /* other classes*/
 
 .site {
-	width: -webkit-fill-available;
-	height: 80vmax;
+  width: -webkit-fill-available;
+  height: 90vmin;
 }
 .hidden {
  display: none;

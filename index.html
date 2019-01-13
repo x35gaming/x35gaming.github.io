@@ -6,53 +6,79 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
     <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="643533486952-dmlqng69qckm1gfni9i62guugje9hn2o.apps.googleusercontent.com">
+    <!-- Add correct client ID-->
+    <meta name="google-signin-client_id" content="Client_ID">
     
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css"/>    
-    
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />    
+
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
 </head>
 <body>
 	<div id="googlesignin" class="visible">
 		<h1 id="welcometext">Welcome to School, the most hated place on planet Earth (or should I say the web?)</h1>
-		<div id="firebaseui-auth-container"></div>
+		<!--<div id="firebaseui-auth-container"></div>-->
+		<div id="signin-div"><img id="signinbutton" src="img/googlesignin.png" onclick="var provider=new firebase.auth.GoogleAuthProvider();firebase.auth().signInWithPopup(provider).then(function(){});"></div>
 		<p id="plzsignin">Please sign in with Google</p>
 	</div>
 		
 	<!-- Below is the div after sign-in-->
 	<div id="signinsuccess" class="hidden">
-		<h1>School Web Des<var style="font-style: normal;" onclick="unlock">i</var>gn Project</h1>
-		<p id="introtext">Welcome to our school web design project. As you can see, we have not done a lot. As such, we would appreciate it if you could please recite some Shakespeare for us. </p>
-		<p id="loltext">As for us, we'll just have some FUN!</p>
-		<p id="loremtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod mi vitae orci hendrerit, a vulputate lacus dignissim. Vivamus non aliquet quam. Mauris non eros ipsum. Nunc lacus lorem, lobortis vitae velit non, facilisis condimentum nisi. Donec ac lacinia neque. Aliquam a ultricies sem, id mollis lacus. Mauris sed eros sed nisi molestie sollicitudin a in enim. Sed dapibus, odio at tempor pellentesque, mi lacus varius metus, et pretium enim purus ac quam. Duis fermentum urna vitae porta euismod. Donec feugiat tempor semper. Sed eu odio pulvinar, accumsan tellus ut, congue quam. Morbi eget dapibus velit. Nunc sollicitudin finibus nunc. Curabitur vulputate quam quis ante tincidunt faucibus. Pellentesque ultricies est orci, et dapibus risus tempor ac. Suspendisse sed lacus quis massa elementum tempor at non libero. Ut finibus viverra urna a bibendum. Curabitur feugiat nibh eget tellus molestie, eget ornare neque finibus. Sed at porttitor erat, sit amet tincidunt erat. In hendrerit risus non leo lobortis, sed luctus augue accumsan. Duis fringilla suscipit magna, a placerat nisl iaculis nec. Nunc fermentum sagittis efficitur. Vivamus iaculis, arcu ut dapibus vulputate, lacus lacus placerat enim, non pretium libero nulla non mi. In porttitor, libero ut finibus posuere, mauris velit imperdiet elit, ac vehicula arcu dolor et diam. Ut sit amet feugiat dolor. Fusce at porttitor urna. Donec tempus nibh non nunc laoreet, sed accumsan sem rutrum. Quisque a maximus tortor. In vitae metus quis elit maximus vehicula. Cras quis odio quis augue lacinia placerat sed in lacus. Cras dui quam, viverra et pharetra eget, venenatis ac tellus. Proin vel erat dapibus risus posuere consectetur. Nunc semper, felis ac volutpat feugiat, massa arcu convallis est, non malesuada libero mi sed augue. Fusce tempor leo quis elit aliquet, id auctor mauris euismod. Phasellus fermentum molestie velit, non luctus tellus vehicula eget. Ut dictum eros quis quam convallis viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla blandit dolor non orci faucibus, sagittis mollis neque maximus. Praesent dignissim interdum quam. Ut fringilla laoreet fringilla. Donec ac turpis justo. Praesent sollicitudin convallis fermentum. Phasellus imperdiet imperdiet urna, at finibus lacus lobortis ut. Morbi vel elit erat. Curabitur elementum in libero vel elementum. Vestibulum dapibus hendrerit magna non consectetur. Praesent nec risus et dolor elementum tristique. Maecenas vehicula nunc ut molestie varius. Cras non laoreet sem. Curabitur vitae efficitur urna, sit amet tempus quam. Curabitur sollicitudin tellus nec tristique congue. Cras eleifend aliquet leo et volutpat. Donec non lectus ut tellus ullamcorper rutrum a eu nibh. In nec lobortis nunc, ac dignissim justo. Aenean viverra, ligula ut lacinia sagittis, ex elit tincidunt purus, vel consectetur lorem nulla eu orci. Quisque interdum odio at libero bibendum, vel facilisis ipsum ullamcorper. Nulla ac turpis tempor, volutpat urna eget, commodo metus. Integer ut ex justo. Cras in sollicitudin metus. Integer volutpat iaculis erat vel pellentesque. Cras ornare neque tellus, sit amet commodo ipsum hendrerit sed.</p>
+		<h1>School Web Des<var style="font-style: normal;" onclick="openSesame();">i</var>gn Project<button id="logout" onclick="firebase.auth().signOut(); 
+                             location.reload();">Log out</button></h1>
+		<p id="introtext">Welcome to our school web design project. As you can see, we have not done a lot. As such, we would appreciate it if you could please recite some Shakespeare for us, with lots of added sound effects. McDonalds McNuggets would be greatly appreciated as well. Please mail them to your local mental health professional. </p>
+		<p id="loltext">If you're bored, read on!</p>
+		<p> School is something very familiar to all of us. We go every weekday for eight hours, then come home to do homework. We also know school to be very annoying, boring, and useless. Students would be able to learn much better in a much better environment than what is usually provided. Education is important, but it must reach the students. Schools would be much better for everyone, teachers and students alike, if some things were changed. </p>
+		<p>First, the starting time. Elementary school starts at 8:30 AM or something similar. Middle school starts at 8:00 AM, and high school starts even earlier at 7:30 AM. Studies have shown that schools that start around or after 8:00 AM produce better, more successful students. If all schools' starting times were moved up by maybe a half an hour, students would be performing much better in school, leading to an enhanced education. </p>
+		<p>Secondly, fire drills, lockdowns, etc. These are good in the sense that we are preparing for emergencies. The problem is, these happen drills happen once every month, while the actual emergencies happen perhaps once every decade or so. If the number of drills is cut down by even two thirds, much less time would be wasted outside preparing for a very rare event. </p>
+		<p>Thirdly, lunch time. In elementary school and middle school, lunch is very short. Most of the time not even half an hour. In high school, it's better, with an hour of lunch. But, lunch time is a great time to eat, do homework, talk with friends, and many other things. In elementary and middle school, there is barely enough time to finish eating a slightly larger than average lunch. If lunch was extended to be 45 or 50 minutes, students would be more successful, being able to meet with more teachers, do more homework, and finish eating, all in one lunch. </p>
+		<p>Fourthly, homework. Most if not all students groan when they hear this word. It takes time away from their activities at home, which they do not want. Some classes have extra time at the end when you can get a head-start on your homework, but not in every class. If there was a designated ten or so minutes at the end of each class for students to do homework, whether in that class or a different one, students would have less homework at home, and be able to study more at home, leading to better test grades. Teachers usually are able to cram an hour long lesson into thirty minutes when needed to, so if they could do that every single class period, there would be time left over for homework. </p>
+		<p>Finally, transportion. Buses are great for after school conversations and doing homework..., unless there's barely room to breathe. On my bus, for example, the bus ride was very productive on the ride home, until a new stop was added by the school adminstration. Now, instead of a comfortable two people in a two and a half seater, we have to squeeze three people in that space, causing much discomfort. The main point of the ride now, instead of having fun and doing work, is surviving the ride home without suffocating. Also, there have been days where people had to be booted off the bus and picked up by their parents for there to be enough room for everyont to have at least an inch of seating space. If these bus routes were more thought out, none of these problems would exist. </p>
+		<p>In conclusion, school has the potential to produce wonderful students, and the potential to be an enjoying experience, but many problems that exist limit it's effectiveness. </p>
 	</div>
 
 			<!-- Below is the div where you can actually do stuff-->
 	<div id="truediv" class="hidden">
 		<div class="tab">
         	<button class="tablinks" onclick="openPage(event, 'welcome')">Welcome</button>
+        	<button class="tablinks" onclick="openPage(event, 'about')">About</button>
         	<button class="tablinks" onclick="openPage(event, 'blocked')">Blocked sites</button>                                                            
         	<button class="tablinks" onclick="openPage(event, 'youtube')">YouTube Player</button>
         	<button class="tablinks" onclick="openPage(event, 'coolmath')">Cool Math</button>
-        	<button class="tablinks" onclick="openPage(event, 'credits')">Credits</button>        	
+        	        	
     	</div>
 
     	<div id="welcome" class="tabcontent" style="display: block;">
         	<h1>Congratulations! You have found the true site, whether by accident or by knowledge.</h1>
         	<h3>First, some rules:</h3>
         	<ul>
-        		<li>Teachers are not to know about this site, and definitely not it's key</li>
-        		<li>Students that have not been given explicit permission to use this site will not be told about it</li>
+        		<li>Unauthorized persons are not to know about this site, and definitely not it's key</li>
+        		<li>Persons that have not been given explicit permission to use this site are not be told about it</li>
         		<li>There is not to be inappropriate use of this site and its functions</li>
-        		<li>You may copy the code, as this is an open source project, but <a onclick="getElementById.credits('click')">credit</a> is always appreciated.</li>
+        		<li>You may copy the code, as this is an open source project, but credit is always appreciated</li>
         	</ul>
         	<h5>Remember that the owner can ban you from the site if you violate any of these rules.</h5>
         	<p id="fun">With all those rules in place, have fun!</p>
+    	</div>
+
+    	<div id="about" class="tabcontent">
+    		<h1>About <b><i>School</i></b></h1>
+    		<h2>Credits</h2>
+    		<h3>Without the help from several people and places, I would not be able to have done this.</h3>
+    		<ul>
+    			<li><a>Battlesquid</a> on Cemetech for firebase sign in</li>
+    			<li><a>_iPhoenix_</a>  on Cemetech for firebase, and lots of help in past projects that enabled me to know 90% (100%?) of what I know now.</li>
+    			<li><a>W3Schools</a> for tab code and a lot of other random html stuff</li>
+    			<li>People from school that helped with odds and ends</li>
+    		</ul>
+    		<h2>Contributing</h2>
+    		<p>If you would like to contribute to this project, fork this project's <a href="https://github.com/jcgter777/School/">github repository</a>, edit it, and make a pull request to jcgter777/master. </p>
+    		<h2>Issues</h2>
+    		<p>If you encounter any problems on this site, or ideas that would make this better, make an issue <a href="https://github.com/jcgter777/School/issues/">here. </p>
     	</div>
 
     	<div id="blocked" class="tabcontent">
@@ -111,18 +137,10 @@
     		<iframe src="https://coolmath-games.com/" class="site"></iframe>
     	</div>
 
-    	<div id="credits" class="tabcontent">
-    		<h3>Without the help from several people and places, I would not be able to have done this.</h3>
-    		<ul>
-    			<li>Battlesquid on Cemetech for firebase sign in</li>
-    			<li>_iPhoenix_ also on Cemetech for firebaseui usage, and lots of help in past projects that enabled me to know 90% of what I know now.</li>
-    			<li>W3Schools for tab code</li>
-    			<li>People from school that helped with odds and ends</li>
-    		</ul>
-    	</div>
+    	
     </div>
 
-    <footer class="footer">&copy;2018 jcgter777</footer>
+    <footer class="footer">&copy;2019 jcgter777</footer>
     <script type="text/javascript" src="js/basefire.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 

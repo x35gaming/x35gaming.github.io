@@ -1,3 +1,13 @@
+function openSesame() {
+  document.getElementById('truediv').classList = 'visible';
+  document.getElementById('signinsuccess').classList = 'hidden';
+  document.getElementById('googlesignin').classList = 'hidden';
+}
+
+
+
+
+
 function openPage(evt, pageName) {
   var i, tabcontent, tablinks;
 

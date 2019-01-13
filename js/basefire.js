@@ -1,12 +1,12 @@
 var config = {
-                apiKey: "AIzaSyBlcxJyIQ5YfkL9-pgnJpoIOvgrCYAu4_E",
-                authDomain: "make-school-great-again.firebaseapp.com",
-                databaseURL: "https://make-school-great-again.firebaseio.com",
-                projectId: "make-school-great-again",
-                storageBucket: "",
-                messagingSenderId: "643533486952"
-            };
-            firebase.initializeApp(config);
+    apiKey: "AIzaSyBlcxJyIQ5YfkL9-pgnJpoIOvgrCYAu4_E",
+    authDomain: "make-school-great-again.firebaseapp.com",
+    databaseURL: "https://make-school-great-again.firebaseio.com",
+    projectId: "make-school-great-again",
+    storageBucket: "",
+    messagingSenderId: "643533486952"
+  };
+  firebase.initializeApp(config);
 
 let auth = firebase.auth();
 auth.onAuthStateChanged(user => {
@@ -22,11 +22,9 @@ function signedIn() {
   document.getElementById('googlesignin').classList = 'hidden';
   document.getElementById('signinsuccess').classList = 'visible';
   document.getElementById("truediv").classList = 'hidden';
-  /*document.getElementById('signedOutNotif').style.display = "none";*/
 }
 
 function signedOut() {
-  alert("Sign in with Google");
-  /*document.getElementById('signedOutNotif').style.display = "block";*/
+  alert("Sign in with Google!");
 }
   
