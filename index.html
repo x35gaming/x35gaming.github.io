@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School</title>
+    <link rel="shortcut icon" href="img/icon.png">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
+    <meta name="google-signin-scope" content="profile email">
+    <!-- Add correct client ID-->
+    <meta name="google-signin-client_id" content="Client_ID">
+    
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />    
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+</head>
+<body>
+	<div id="googlesignin" class="hidden">
+		<h1 id="welcometext">Welcome to School, the most hated place on planet Earth (or should I say the web?)</h1>
+		<div id="firebaseui-auth-container"></div>
+		<p id="plzsignin">Please sign in with Google</p>
+	</div>
+		
+	<!-- Below is the div after sign-in-->
+	<div id="signinsuccess" class="hidden">
+		<h1>School Web Des<var style="font-style: normal;" onclick="unlock">i</var>gn Project</h1>
+		<p id="introtext">Welcome to our school web design project. As you can see, we have not done a lot. As such, we would appreciate it if you could please recite some Shakespeare for us. </p>
+		<p id="loltext">As for us, we'll just have some FUN!</p>
+		<p id="loremtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod mi vitae orci hendrerit, a vulputate lacus dignissim. Vivamus non aliquet quam. Mauris non eros ipsum. Nunc lacus lorem, lobortis vitae velit non, facilisis condimentum nisi. Donec ac lacinia neque. Aliquam a ultricies sem, id mollis lacus. Mauris sed eros sed nisi molestie sollicitudin a in enim. Sed dapibus, odio at tempor pellentesque, mi lacus varius metus, et pretium enim purus ac quam. Duis fermentum urna vitae porta euismod. Donec feugiat tempor semper. Sed eu odio pulvinar, accumsan tellus ut, congue quam. Morbi eget dapibus velit. Nunc sollicitudin finibus nunc. Curabitur vulputate quam quis ante tincidunt faucibus. Pellentesque ultricies est orci, et dapibus risus tempor ac. Suspendisse sed lacus quis massa elementum tempor at non libero. Ut finibus viverra urna a bibendum. Curabitur feugiat nibh eget tellus molestie, eget ornare neque finibus. Sed at porttitor erat, sit amet tincidunt erat. In hendrerit risus non leo lobortis, sed luctus augue accumsan. Duis fringilla suscipit magna, a placerat nisl iaculis nec. Nunc fermentum sagittis efficitur. Vivamus iaculis, arcu ut dapibus vulputate, lacus lacus placerat enim, non pretium libero nulla non mi. In porttitor, libero ut finibus posuere, mauris velit imperdiet elit, ac vehicula arcu dolor et diam. Ut sit amet feugiat dolor. Fusce at porttitor urna. Donec tempus nibh non nunc laoreet, sed accumsan sem rutrum. Quisque a maximus tortor. In vitae metus quis elit maximus vehicula. Cras quis odio quis augue lacinia placerat sed in lacus. Cras dui quam, viverra et pharetra eget, venenatis ac tellus. Proin vel erat dapibus risus posuere consectetur. Nunc semper, felis ac volutpat feugiat, massa arcu convallis est, non malesuada libero mi sed augue. Fusce tempor leo quis elit aliquet, id auctor mauris euismod. Phasellus fermentum molestie velit, non luctus tellus vehicula eget. Ut dictum eros quis quam convallis viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla blandit dolor non orci faucibus, sagittis mollis neque maximus. Praesent dignissim interdum quam. Ut fringilla laoreet fringilla. Donec ac turpis justo. Praesent sollicitudin convallis fermentum. Phasellus imperdiet imperdiet urna, at finibus lacus lobortis ut. Morbi vel elit erat. Curabitur elementum in libero vel elementum. Vestibulum dapibus hendrerit magna non consectetur. Praesent nec risus et dolor elementum tristique. Maecenas vehicula nunc ut molestie varius. Cras non laoreet sem. Curabitur vitae efficitur urna, sit amet tempus quam. Curabitur sollicitudin tellus nec tristique congue. Cras eleifend aliquet leo et volutpat. Donec non lectus ut tellus ullamcorper rutrum a eu nibh. In nec lobortis nunc, ac dignissim justo. Aenean viverra, ligula ut lacinia sagittis, ex elit tincidunt purus, vel consectetur lorem nulla eu orci. Quisque interdum odio at libero bibendum, vel facilisis ipsum ullamcorper. Nulla ac turpis tempor, volutpat urna eget, commodo metus. Integer ut ex justo. Cras in sollicitudin metus. Integer volutpat iaculis erat vel pellentesque. Cras ornare neque tellus, sit amet commodo ipsum hendrerit sed.</p>
+	</div>
+
+			<!-- Below is the div where you can actually do stuff-->
+	<div id="truediv" class="visible">
+		<div class="tab">
+        	<button class="tablinks" onclick="openPage(event, 'welcome')">Welcome</button>
+        	<button class="tablinks" onclick="openPage(event, 'blocked')">Blocked sites</button>                                                            
+        	<button class="tablinks" onclick="openPage(event, 'youtube')">YouTube Player</button>
+        	<button class="tablinks" onclick="openPage(event, 'coolmath')">Cool Math</button>
+        	<button class="tablinks" onclick="openPage(event, 'credits')">Credits</button>        	
+    	</div>
+
+    	<div id="welcome" class="tabcontent" style="display: block;">
+        	<h1>Congratulations! You have found the true site, whether by accident or by knowledge.</h1>
+        	<h3>First, some rules:</h3>
+        	<ul>
+        		<li>Teachers are not to know about this site, and definitely not it's key</li>
+        		<li>Students that have not been given explicit permission to use this site will not be told about it</li>
+        		<li>There is not to be inappropriate use of this site and its functions</li>
+        		<li>You may copy the code, as this is an open source project, but <a onclick="getElementById.credits('click')">credit</a> is always appreciated.</li>
+        	</ul>
+        	<h5>Remember that the owner can ban you from the site if you violate any of these rules.</h5>
+        	<p id="fun">With all those rules in place, have fun!</p>
+    	</div>
+
+    	<div id="blocked" class="tabcontent">
+    		<div class="tabe">
+            	<button class="tablinkse" onclick="openSite(event, 'blank')">Blank</button>
+            	<button class="tablinkse" onclick="openSite(event, 'creatur')">Creatur.io</button>
+            	<button class="tablinkse" onclick="openSite(event, 'paper')">Paper.io</button>
+            	<button class="tablinkse" onclick="openSite(event, 'hole')">Hole.io</button>
+            	<button class="tablinkse" onclick="openSite(event, 'build')">Buildroyale.io</button>
+            	<button class="tablinkse" onclick="openSite(event, 'worm')">Wormate.io</button>
+            	<button class="tablinkse" onclick="openSite(event, 'silver')">Silvergames.com</button>
+        	</div>
+            
+        	<div id="creatur" class="tabcontente">
+            	<iframe src="https://www.creatur.io/" class="site"></iframe>
+            	<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        	</div>
+            
+        	<div id="paper" class="tabcontente">
+            	<iframe src="https://www.paper-io.com/" class="site" scrolling="no"></iframe>
+            	<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        	</div>
+            
+        	<div id="hole" class="tabcontente">
+            	<iframe src="https://hole-io.com/" class="site" scrolling="no"></iframe>
+            	<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        	</div>
+            
+        	<div id="build" class="tabcontente">
+            	<iframe src="https://www.buildroyale.io/" class="site" scrolling="no"></iframe>
+            	<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        	</div>
+            
+        	<div id="worm" class="tabcontente">
+            	<iframe src="https://wormate.io/" class="site" scrolling="no"></iframe>
+            	<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        	</div>
+            
+        	<div id="silver" class="tabcontente">
+            	<iframe src="https://silvergames.com/" class="site"></iframe>
+            	<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        	</div>
+            
+        	<div id="blank" class="tabcontente">
+            	<iframe src="about:blank" class="site"></iframe>
+            	<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        	</div>
+    	</div>
+
+    	<div id="youtube" class="tabcontent">
+    		<!-- A form tag maybe? -->
+    		<textarea contenteditable="true" placeholder="Search for YouTube videos"></textarea>
+    	</div>
+
+    	<div id="coolmath" class="tabcontent">
+    		<iframe src="https://coolmath-games.com/" class="site"></iframe>
+    	</div>
+
+    	<div id="credits" class="tabcontent">
+    		<h3>Without the help from several people and places, I would not be able to have done this.</h3>
+    		<ul>
+    			<li>Battlesquid on Cemetech for firebase sign in</li>
+    			<li>_iPhoenix_ also on Cemetech for firebaseui usage, and lots of help in past projects that enabled me to know 90% of what I know now.</li>
+    			<li>W3Schools for tab code</li>
+    			<li>People from school that helped with odds and ends</li>
+    		</ul>
+    	</div>
+    </div>
+
+    <footer class="footer">&copy;2018 jcgter777</footer>
+    <script type="text/javascript" src="js/basefire.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
