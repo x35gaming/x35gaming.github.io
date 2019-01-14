@@ -15,11 +15,11 @@
     <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
 </head>
-<body onload="trackIP();" id="body">
+<body id="body">
 	<div id="googlesignin" class="visible">
 		<h1 id="welcometext">Welcome to School; Enjoy yourself and get educated!</h1>
 		<div id="signin-div"><img id="signinbutton" src="img/googlesignin.png" onclick="var provider=new firebase.auth.GoogleAuthProvider();firebase.auth().signInWithPopup(provider).then(function(){});"></div>
-		<p id="plzsignin">Please sign in with Google</p>
+		<p id="plzsignin">Please sign in with Google to access site.</p>
 	</div>
 		
 	<!-- Below is the div after sign-in-->
@@ -94,7 +94,6 @@
             	<button class="tablinks1" onclick="openSite(event, 'hole')">Hole.io</button>
             	<button class="tablinks1" onclick="openSite(event, 'worm')">Wormate.io</button>
             	<button class="tablinks1" onclick="openSite(event, 'silver')">Silvergames.com</button>
-            	<button class="tablinks1" onclick="openSite(event, 'coolmath')">Cool Math</button>
         	</div>
             
         	<div id="creatur" class="tabcontent1">
@@ -121,11 +120,6 @@
         		<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
             	<iframe src="https://silvergames.com/" class="site"></iframe>
         	</div>
-            
-            <div id="coolmath" class="tabcontent1">
-    			<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-    			<iframe src="https://www.coolmathgames.com/" class="site"></iframe>
-    		</div>
 
         	<div id="blank" class="tabcontent1">
         		<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
@@ -144,16 +138,10 @@
 
     	<div id="browse" class="tabcontent">
     		<div class="tab1">
-    			<button class="tablinks1" onclick="openSite(event, 'duck')">DuckDuckGo</button>
     			<button class="tablinks1" onclick="openSite(event, 'bing')">Bing</button>
     		</div>
 
-    		<div id="duck" class="tabcontent1" style="display: block;">
-    			<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-    			<iframe src="https://duckduckgo.com/" class="site"></iframe>
-    		</div>	
-
-    		<div id="bing" class="tabcontent1">
+    		<div id="bing" class="tabcontent1" style="display: block;">
     			<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
     			<iframe src="https://bing.com/" class="site"></iframe>
     		</div>
