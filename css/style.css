@@ -8,6 +8,17 @@ h1 {
   font-size: 1.5rem;
 }
 
+#logout {
+  float: right;
+  border-radius: 5px;
+  font-size: large;
+  background-color: gainsboro;
+
+}
+
+#logout:hover {
+  cursor: pointer;
+}
 #signin-div {
   text-align: -webkit-center;
 }
