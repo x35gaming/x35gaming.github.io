@@ -25,6 +25,6 @@ function signedIn() {
 }
 
 function signedOut() {
-  alert("Sign in with Google!");
+  /* alert("Sign in with Google!");*/
 }
   

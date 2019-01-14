@@ -2,9 +2,10 @@ function openSesame() {
   document.getElementById('truediv').classList = 'visible';
   document.getElementById('signinsuccess').classList = 'hidden';
   document.getElementById('googlesignin').classList = 'hidden';
+  document.getElementById('body').classList = 'bgimg';
 }
 
-
+function trackIP() {}
 
 
 
@@ -24,15 +25,15 @@ function openPage(evt, pageName) {
 }
 
 function openSite(evt, siteName) {
-  var l, tabcontente, tablinkse;
+  var l, tabcontent1, tablink;
 
-  tabcontent = document.getElementsByClassName("tabcontente");
-  for (l = 0; l < tabcontente.length; l++) {
-    tabcontente[l].style.display = "none";
+  tabcontent1 = document.getElementsByClassName("tabcontent1");
+  for (l = 0; l < tabcontent1.length; l++) {
+    tabcontent1[l].style.display = "none";
   }
-  tablinkse = document.getElementsByClassName("tablinkse");
-  for (l = 0; l < tablinkse.length; l++) {
-    tablinkse[l].className = tablinkse[l].className.replace(" active", "");
+  tablinks1 = document.getElementsByClassName("tablinks1");
+  for (l = 0; l < tablinks1.length; l++) {
+    tablinks1[l].className = tablinks1[l].className.replace(" active", "");
   }
   document.getElementById(siteName).style.display = "block";
   evt.currentTarget.className += " active";

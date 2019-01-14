@@ -1,11 +1,23 @@
-body {
+* {
   font-family: 'Ubuntu', sans-serif;
-  padding: 1px;
+}
+
+.bgimg {
+  background: url('img/abstract1.jpg');
 }
 
 h1 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
+}
+
+#chatframe {
+  width: 60vmax;
+  height: 30vmin;
+}
+
+#essay-div {
+  font-size: small;
 }
 
 #logout {
@@ -13,12 +25,9 @@ h1 {
   border-radius: 5px;
   font-size: large;
   background-color: gainsboro;
-
-}
-
-#logout:hover {
   cursor: pointer;
 }
+
 #signin-div {
   text-align: -webkit-center;
 }
@@ -39,9 +48,10 @@ h1 {
 
 .tab {
  overflow: hidden;
- border: 1px solid #ccc;
+ border: 1px solid #fff;
  background-color: aliceblue;
  margin: 0px; 
+ border-radius: 5px;
 }
 
 .tab button {
@@ -50,8 +60,9 @@ h1 {
  border: none;
  outline: none;
  cursor: pointer;
- padding: 14px 16px;
+ padding: 7px 15px;
  transition: 0.3s;
+ font-size: medium;
 }
 
 .tab button:hover {
@@ -64,47 +75,53 @@ h1 {
 
 .tabcontent {
  display: none;
- padding: 6px 12px;
- border: 1px solid #ccc;
+ padding: 5px 5px;
+ border: 1px solid #DCDCDC;
  border-top: none;
- animation: fadeEffect .5s;
- background-color: #f4f8fd2e;
- 
+ animation: fadeEffect .3s;
+ background: transparent;
+ border-radius: 5px;
+ color: white;
 }
 
 /* Below is the second set of tabs */
 
-.tabe {
+.tab1 {
  overflow: hidden;
- border: 1px solid #ccc;
- background-color: #9ab9ff;
+ border: 1px solid aliceblue;
+ background-color: aliceblue;
  margin: 0px; 
+ border-radius: 5px;
 }
 
-.tabe button {
+.tab1 button {
  background-color: inherit;
  float: left;
  border: none;
  outline: none;
  cursor: pointer;
- padding: 14px 16px;
+ padding: 5px 15px;
  transition: 0.3s;
+ font-size: small;
 }
 
-.tabe button:hover {
-  background-color: #319dfb;
+.tab1 button:hover {
+  background-color: #87ceeb99;
 }
 
-.tabe button.active {
- background-color: #0087fd;
+.tab1 button.active {
+ background-color: skyblue;
 }
 
-.tabcontente {
+.tabcontent1 {
  display: none;
  padding: 6px 12px;
- border: 1px solid #ccc;
+ border: 1px solid #DCDCDC;
  border-top: none;
- animation: fadeEffect .5s;
+ animation: fadeEffect .3s;
+ border-radius: 5px;
+ background-color: #fff;
+ background: transparent;
 }
 
 @keyframes fadeEffect {
@@ -112,19 +129,22 @@ h1 {
   to {opacity: 1;}
 }
 
+@keyframes winterEffect {
+  
+}
 
 .topright {
   float: right;
   float: top;
   cursor: pointer;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 /* other classes*/
 
 .site {
   width: -webkit-fill-available;
-  height: 90vmin;
+  height: 80vmin;
 }
 .hidden {
  display: none;
