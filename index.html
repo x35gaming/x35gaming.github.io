@@ -1,161 +1,175 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>School</title>
-    <link rel="shortcut icon" href="img/icon.png">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="643533486952-dmlqng69qckm1gfni9i62guugje9hn2o.apps.googleusercontent.com">
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+	<title>School</title>
+	<link rel="shortcut icon" href="img/icon.png">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
+	<!--<meta name="google-signin-scope" content="profile email">-->
+	<!--<meta name="google-signin-client_id" content="643533486952-dmlqng69qckm1gfni9i62guugje9hn2o.apps.googleusercontent.com">-->
+	<!--<script defer="true" src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>-->
+	<!--<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />-->
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script defer="true" src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+	<script defer="true" src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+	<script defer="true" src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+	<script defer="true" src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
 </head>
+
 <body id="body">
 	<div id="googlesignin" class="visible">
 		<h1 id="welcometext">Welcome to School; Enjoy yourself and get educated!</h1>
-		<div id="signin-div"><img id="signinbutton" src="img/googlesignin.png" onclick="var provider=new firebase.auth.GoogleAuthProvider();firebase.auth().signInWithPopup(provider).then(function(){});"></div>
+		<div id="signin-div"><img id="signinbutton" src="img/googlesignin.png" onclick=""></div>
 		<p id="plzsignin">Please sign in with Google to access site.</p>
 	</div>
-		
+
 	<!-- Below is the div after sign-in-->
 	<div id="signinsuccess" class="hidden">
-		<h1 id="signintitle">School Web Des<var style="font-style: normal;" onclick="openSesame();">i</var>gn Project<button id="logout" onclick="firebase.auth().signOut(); 
-                             location.reload();">Log out</button></h1>
+		<h1 id="signintitle">School Web Des<var style="font-style: normal;" onclick="openSesame();">i</var>gn Project
+			<button id="logout" onclick="firebase.auth().signOut();
+                             location.reload();">Log out</button>
+		</h1>
 		<p id="introtext">Welcome to our school web design project. As you can see, we have not done a lot. As such, we would appreciate it if you could please recite some Shakespeare for us, with lots of added burps. McDonalds McNuggets would be greatly appreciated as well. </p>
 		<p id="loltext">If you're bored, read on!</p>
-		<div id="essay-div"><p> School is something very familiar to all of us. We go every weekday for eight hours, then come home to do homework. We also know school to be very annoying, boring, and useless. Students would be able to learn much better in a much better environment than what is usually provided. Education is important, but it must reach the students. Schools would be much better for everyone, teachers and students alike, if some things were changed. </p>
-		<p>First, the starting time. Elementary school starts at 8:30 AM or something similar. Middle school starts at 8:00 AM, and high school starts even earlier at 7:30 AM. Studies have shown that schools that start around or after 8:00 AM produce better, more successful students. If all schools' starting times were moved up by maybe a half an hour, students would be performing much better in school, leading to an enhanced education. </p>
-		<p>Secondly, fire drills, lockdowns, etc. These are good in the sense that we are preparing for emergencies. The problem is, these happen drills happen once every month, while the actual emergencies happen perhaps once every decade or so. If the number of drills is cut down by even two thirds, much less time would be wasted outside preparing for a very rare event. </p>
-		<p>Thirdly, lunch time. In elementary school and middle school, lunch is very short. Most of the time not even half an hour. In high school, it's better, with an hour of lunch. But, lunch time is a great time to eat, do homework, talk with friends, and many other things. In elementary and middle school, there is barely enough time to finish eating a slightly larger than average lunch. If lunch was extended to be 45 or 50 minutes, students would be more successful, being able to meet with more teachers, do more homework, and finish eating, all in one lunch. </p>
-		<p>Fourthly, homework. Most if not all students groan when they hear this word. It takes time away from their activities at home, which they do not want. Some classes have extra time at the end when you can get a head-start on your homework, but not in every class. If there was a designated ten or so minutes at the end of each class for students to do homework, whether in that class or a different one, students would have less homework at home, and be able to study more at home, leading to better test grades. Teachers usually are able to cram an hour long lesson into thirty minutes when needed to, so if they could do that every single class period, there would be time left over for homework. </p>
-		<p>Finally, transportion. Buses are great for after school conversations and doing homework..., unless there's barely room to breathe. On my bus, for example, the bus ride was very productive on the ride home, until a new stop was added by the school adminstration. Now, instead of a comfortable two people in a two and a half seater, we have to squeeze three people in that space, causing much discomfort. The main point of the ride now, instead of having fun and doing work, is surviving the ride home without suffocating. Also, there have been days where people had to be booted off the bus and picked up by their parents for there to be enough room for everyont to have at least an inch of seating space. If these bus routes were more thought out, none of these problems would exist. </p>
-		<p>In conclusion, school has the potential to produce wonderful students, and the potential to be an enjoying experience, but many problems that exist limit it's effectiveness. </p></div>
+		<div id="essay-div">
+			<p> School is something very familiar to all of us. We go every weekday for eight hours, then come home to do homework. We also know school to be very annoying, boring, and useless. Students would be able to learn much better in a much better environment than what is usually provided. Education is important, but it must reach the students. Schools would be much better for everyone, teachers and students alike, if some things were changed. </p>
+			<p>First, the starting time. Elementary school starts at 8:30 AM or something similar. Middle school starts at 8:00 AM, and high school starts even earlier at 7:30 AM. Studies have shown that schools that start around or after 8:00 AM produce better, more successful students. If all schools' starting times were moved up by maybe a half an hour, students would be performing much better in school, leading to an enhanced education. </p>
+			<p>Secondly, fire drills, lockdowns, etc. These are good in the sense that we are preparing for emergencies. The problem is, these happen drills happen once every month, while the actual emergencies happen perhaps once every decade or so. If the number of drills is cut down by even two thirds, much less time would be wasted outside preparing for a very rare event. </p>
+			<p>Thirdly, lunch time. In elementary school and middle school, lunch is very short. Most of the time not even half an hour. In high school, it's better, with an hour of lunch. But, lunch time is a great time to eat, do homework, talk with friends, and many other things. In elementary and middle school, there is barely enough time to finish eating a slightly larger than average lunch. If lunch was extended to be 45 or 50 minutes, students would be more successful, being able to meet with more teachers, do more homework, and finish eating, all in one lunch. </p>
+			<p>Fourthly, homework. Most if not all students groan when they hear this word. It takes time away from their activities at home, which they do not want. Some classes have extra time at the end when you can get a head-start on your homework, but not in every class. If there was a designated ten or so minutes at the end of each class for students to do homework, whether in that class or a different one, students would have less homework at home, and be able to study more at home, leading to better test grades. Teachers usually are able to cram an hour long lesson into thirty minutes when needed to, so if they could do that every single class period, there would be time left over for homework. </p>
+			<p>Finally, transportion. Buses are great for after school conversations and doing homework..., unless there's barely room to breathe. On my bus, for example, the bus ride was very productive on the ride home, until a new stop was added by the school adminstration. Now, instead of a comfortable two people in a two and a half seater, we have to squeeze three people in that space, causing much discomfort. The main point of the ride now, instead of having fun and doing work, is surviving the ride home without suffocating. Also, there have been days where people had to be booted off the bus and picked up by their parents for there to be enough room for everyont to have at least an inch of seating space. If these bus routes were more thought out, none of these problems would exist. </p>
+			<p>In conclusion, school has the potential to produce wonderful students, and the potential to be an enjoying experience, but many problems that exist limit it's effectiveness. </p>
+		</div>
 	</div>
 
 	<!--Below is the div where you can actually do stuff-->
 	<div id="truediv" class="hidden">
 		<div class="tab">
-        	<button class="tablinks" onclick="openPage(event, 'welcome')">Welcome</button>
-        	<button class="tablinks" onclick="openPage(event, 'about')">About</button>
-        	<button class="tablinks" onclick="openPage(event, 'websites')">Webites</button>                                                            
-        	<button class="tablinks" onclick="openPage(event, 'youtube')">YouTube</button> 
-        	<button class="tablinks" onclick="openPage(event, 'count')">Count Down</button>
-        	<button class="tablinks" onclick="openPage(event, 'browse')">Browsers</button>
-        	<button class="tablinks" onclick="openPage(event, 'chat')">Chat</button>
-        	<button id="logout" onclick="firebase.auth().signOut(); 
-                             location.reload();">Log out</button>
-    	</div>
+			<button class="tablinks" onclick="openPage(event, 'welcome')">Welcome</button>
+			<button class="tablinks" onclick="openPage(event, 'about')">About</button>
+			<button class="tablinks" onclick="openPage(event, 'websites')">Webites</button>
+			<button class="tablinks" onclick="openPage(event, 'youtube')">YouTube</button>
+			<button class="tablinks" onclick="openPage(event, 'count')">Count Down</button>
+			<button class="tablinks" onclick="openPage(event, 'browse')">Browsers</button>
+			<button class="tablinks" onclick="openPage(event, 'chat')">Chat</button>
+			<button id="logout">Log out</button>
+		</div>
 
-    	<div id="welcome" class="tabcontent" style="display: block;">
-    		<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-        	<h1>Congratulations! You have found the true site, whether by accident or by knowledge.</h1>
-        	<h3>First, some rules*:</h3>
-        	<ul>
-        		<li>Unauthorized persons are not to know about this site, and definitely not it's key</li>
-        		<li>Persons that have not been given explicit permission to use this site are not be told about it</li>
-        		<li>There is not to be inappropriate use of this site and its functions</li>
-        	</ul>
-        	<h5>*The owner can ban you from the site if you violate any of these rules, or for any other reason.</h5>
-        	<p id="fun">With all those rules in place, have fun!</p>
-    	</div>
+		<div id="welcome" class="tabcontent" style="display: block;">
+			<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+			<h1>Congratulations! You have found the true site, whether by accident or by knowledge.</h1>
+			<h3>First, some rules*:</h3>
+			<ul>
+				<li>Unauthorized persons are not to know about this site, and definitely not it's key</li>
+				<li>Persons that have not been given explicit permission to use this site are not be told about it</li>
+				<li>There is not to be inappropriate use of this site and its functions</li>
+			</ul>
+			<h5>*The owner can ban you from the site if you violate any of these rules, or for any other reason.</h5>
+			<p id="fun">With all those rules in place, have fun!</p>
+		</div>
 
-    	<div id="about" class="tabcontent">
-    		<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-    		<h1 style="text-align: left;">About <b><i>School</i></b></h1>
-    		<h2>Credits</h2>
-    		<h3>Without the help from several people and sites, I would not be able to have done this.</h3>
-    		<ul>
-    			<li><p><a>Battlesquid</a> on Cemetech for firebase sign in</p></li>
-    			<li><p><a>_iPhoenix_</a>  on Cemetech for firebase, and lots of help in past projects that enabled me to know 90% (100%?) of what I know now.</p></li>
-    			<li><p><a>W3Schools</a> for tab code and a lot of other random html stuff</p></li>
-    			<li><p>People from school that helped with odds and ends</p></li>
-    		</ul>
-    		<h2>Contributing</h2>
-    		<p>If you would like to contribute to this project, fork this project's <a href="https://github.com/jcgter777/School/">github repository</a>, edit it, and make a pull request to jcgter777/master. </p>
-    		<h2>Issues</h2>
-    		<p>If you encounter any problems on this site, or ideas that would make this better, make an issue <a href="https://github.com/jcgter777/School/issues/">here.</a></p>
-    		<h2>Usage</h2>
-    		<p>If you would like to use this site, tell the owner your email address, so it will not be banned.</p>
-    		<p>Not every part of this site is functioning yet. Please be patient.</p>
-    		<h2>Moderation</h2>
-    		<p>The owner can remove any user at any time for any reason (or no reason at all). </p><p>Rule breakers are to be reported, as are users not given permission.</p>
-    	</div>
+		<div id="about" class="tabcontent">
+			<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+			<h1 style="text-align: left;">About <b><i>School</i></b></h1>
+			<h2>Credits</h2>
+			<h3>Without the help from several people and sites, I would not be able to have done this.</h3>
+			<ul>
+				<li>
+					<p><a>Battlesquid</a> on Cemetech for firebase sign in</p>
+				</li>
+				<li>
+					<p><a>_iPhoenix_</a> on Cemetech for firebase, and lots of help in past projects that enabled me to know 90% (100%?) of what I know now.</p>
+				</li>
+				<li>
+					<p><a>W3Schools</a> for tab code and a lot of other random html stuff</p>
+				</li>
+				<li>
+					<p>People from school that helped with odds and ends</p>
+				</li>
+			</ul>
+			<h2>Contributing</h2>
+			<p>If you would like to contribute to this project, fork this project's <a href="https://github.com/jcgter777/School/">github repository</a>, edit it, and make a pull request to jcgter777/master. </p>
+			<h2>Issues</h2>
+			<p>If you encounter any problems on this site, or ideas that would make this better, make an issue <a href="https://github.com/jcgter777/School/issues/">here.</a></p>
+			<h2>Usage</h2>
+			<p>If you would like to use this site, tell the owner your email address, so it will not be banned.</p>
+			<p>Not every part of this site is functioning yet. Please be patient.</p>
+			<h2>Moderation</h2>
+			<p>The owner can remove any user at any time for any reason (or no reason at all). </p>
+			<p>Rule breakers are to be reported, as are users not given permission.</p>
+		</div>
 
-    	<div id="websites" class="tabcontent">
-    		<div class="tab1">
-            	<button class="tablinks1" onclick="openSite(event, 'blank')">Blank</button>
-            	<button class="tablinks1" onclick="openSite(event, 'creatur')">Creatur.io</button>
-            	<button class="tablinks1" onclick="openSite(event, 'paper')">Paper.io</button>
-            	<button class="tablinks1" onclick="openSite(event, 'hole')">Hole.io</button>
-            	<button class="tablinks1" onclick="openSite(event, 'worm')">Wormate.io</button>
-            	<button class="tablinks1" onclick="openSite(event, 'silver')">Silvergames.com</button>
-        	</div>
-            
-        	<div id="creatur" class="tabcontent1">
-        		<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-            	<iframe src="https://www.creatur.io/" class="site"></iframe>
-        	</div>
-            
-        	<div id="paper" class="tabcontent1">
-        		<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-            	<iframe src="https://www.paper-io.com/" class="site" scrolling="no"></iframe>
-        	</div>
-            
-        	<div id="hole" class="tabcontent1">
-        		<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-            	<iframe src="https://hole-io.com/" class="site" scrolling="no"></iframe>
-        	</div>
-            
-        	<div id="worm" class="tabcontent1">
-        		<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-            	<iframe src="https://wormate.io/" class="site" scrolling="no"></iframe>
-        	</div>
-            
-        	<div id="silver" class="tabcontent1">
-        		<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-            	<iframe src="https://silvergames.com/" class="site"></iframe>
-        	</div>
+		<div id="websites" class="tabcontent">
+			<div class="tab1">
+				<button class="tablinks1" onclick="openSite(event, 'blank')">Blank</button>
+				<button class="tablinks1" onclick="openSite(event, 'creatur')">Creatur.io</button>
+				<button class="tablinks1" onclick="openSite(event, 'paper')">Paper.io</button>
+				<button class="tablinks1" onclick="openSite(event, 'hole')">Hole.io</button>
+				<button class="tablinks1" onclick="openSite(event, 'worm')">Wormate.io</button>
+				<button class="tablinks1" onclick="openSite(event, 'silver')">Silvergames.com</button>
+			</div>
 
-        	<div id="blank" class="tabcontent1">
-        		<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-            	<iframe src="about:blank" class="site"></iframe>
-        	</div>
-    	</div>
+			<div class="tabcontent1">
+				<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+				<iframe id="creatur" src="" class="site"></iframe>
+			</div>
 
-    	<div id="youtube" class="tabcontent">
-    		<p>Browse YouTube and watch videos!</p>
-    	</div>
+			<div class="tabcontent1">
+				<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+				<iframe id="paper" src="" class="site" scrolling="no"></iframe>
+			</div>
 
-    	<div id="count" class="tabcontent">
-    		<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-    		<p>Count down till the end of the year!</p>
-    	</div>
+			<div class="tabcontent1">
+				<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+				<iframe id="hole" src="" class="site" scrolling="no"></iframe>
+			</div>
 
-    	<div id="browse" class="tabcontent">
-    		<div class="tab1">
-    			<button class="tablinks1" onclick="openSite(event, 'bing')">Bing</button>
-    		</div>
+			<div class="tabcontent1">
+				<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+				<iframe id="worm" src="" class="site" scrolling="no"></iframe>
+			</div>
 
-    		<div id="bing" class="tabcontent1" style="display: block;">
-    			<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-    			<iframe src="https://bing.com/" class="site"></iframe>
-    		</div>
-    	</div>
+			<div class="tabcontent1">
+				<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+				<iframe id="silver" src="" class="site"></iframe>
+			</div>
 
-    	<div id="chat" class="tabcontent">
-    		<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-    		<p>Chat with other <b><i>School</i></b>  users!</p>
-    		<iframe src="https://legend-of-iphoenix.github.io/iChat/" id="chatframe"></iframe>
-    	</div>
-    </div>
+			<div id="blank" class="tabcontent1">
+				<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+				<iframe src="about:blank" class="site"></iframe>
+			</div>
+		</div>
 
-    <footer class="footer">&copy;2019 jcgter777</footer>
-    <script type="text/javascript" src="js/basefire.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+		<div id="youtube" class="tabcontent">
+			<p>Browse YouTube and watch videos!</p>
+		</div>
+
+		<div id="count" class="tabcontent">
+			<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+			<p>Count down till the end of the year!</p>
+		</div>
+
+		<div id="browse" class="tabcontent">
+			<div class="tab1">
+				<button class="tablinks1" onclick="openSite(event, 'bing')">Bing</button>
+			</div>
+
+			<div class="tabcontent1" style="display: block;">
+				<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+				<iframe id="bing" src="" class="site"></iframe>
+			</div>
+		</div>
+
+		<div id="chat" class="tabcontent">
+			<span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+			<p>Chat with other <b><i>School</i></b> users!</p>
+			<iframe src="https://legend-of-iphoenix.github.io/iChat/" id="chatframe"></iframe>
+		</div>
+	</div>
+
+	<footer class="footer">&copy;2019 jcgter777</footer>
+	<script defer="true" type="text/javascript" src="js/basefire.js"></script>
+	<script defer="true" type="text/javascript" src="js/main.js"></script>
 
 </body>
