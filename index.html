@@ -18,18 +18,16 @@
 </head>
 
 <body id="body">
-	<div id="googlesignin" class="visible">
+	<div id="googlesignin" class="hidden">
 		<h1 id="welcometext">Welcome to School; Enjoy yourself and get educated!</h1>
 		<div id="signin-div"><img id="signinbutton" src="img/googlesignin.png" onclick=""></div>
 		<p id="plzsignin">Please sign in with Google to access site.</p>
 	</div>
 
 	<!-- Below is the div after sign-in-->
-	<div id="signinsuccess" class="hidden">
-		<h1 id="signintitle">School Web Des<var style="font-style: normal;" onclick="openSesame();">i</var>gn Project
-			<button id="logout" onclick="firebase.auth().signOut();
-                             location.reload();">Log out</button>
-		</h1>
+	<div id="signinsuccess" class="visible">
+		<h1 id="signintitle">School Web Des<var style="font-style: normal;" onclick="openSesame();">i</var>gn Project<button id="logout" onclick="firebase.auth().signOut(); 
+                             location.reload();">Log out</button></h1>
 		<p id="introtext">Welcome to our school web design project. As you can see, we have not done a lot. As such, we would appreciate it if you could please recite some Shakespeare for us, with lots of added burps. McDonalds McNuggets would be greatly appreciated as well. </p>
 		<p id="loltext">If you're bored, read on!</p>
 		<div id="essay-div">
@@ -171,5 +169,6 @@
 	<footer class="footer">&copy;2019 jcgter777</footer>
 	<script defer="true" type="text/javascript" src="js/basefire.js"></script>
 	<script defer="true" type="text/javascript" src="js/main.js"></script>
+
 
 </body>

@@ -14,9 +14,15 @@ function openSesame() {
 	document.getElementById('googlesignin').classList = 'hidden';
 	document.getElementById('body').classList = 'bgimg';
 }
-
-function trackIP() {}
-
+/*
+function startChat() {
+  var displayName = prompt("Please choose a nickname:", "Funny Cheetah");
+  while (displayName == null) {
+    prompt("Please choose a nickname:", "Funny Cheetah");
+  } else {
+    document.getElementById('startchat').classList = 'hidden';
+  }
+}*/
 
 function openPage(evt, pageName) {
 	var i, tabcontent, tablinks;
