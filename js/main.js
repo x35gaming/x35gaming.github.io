@@ -4,7 +4,7 @@ let sites = {
 	"hole": "https://hole-io.com/",
 	"worm": "https://wormate.io/",
 	"silver": "https://silvergames.com/",
-	"blank": "about:blank",
+	/*"blank": "about:blank",*/
 	"bing": "https://bing.com/"
 };
 
