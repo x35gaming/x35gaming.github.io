@@ -12,7 +12,7 @@ function openSesame() {
 	document.getElementById('truediv').classList = 'visible';
 	document.getElementById('signinsuccess').classList = 'hidden';
 	document.getElementById('googlesignin').classList = 'hidden';
-	document.getElementById('body').classList = 'bgimg';
+	/*document.getElementById('body').classList = 'bgimg';*/
 }
 /*
 function startChat() {
