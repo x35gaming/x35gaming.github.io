@@ -14,6 +14,21 @@ function openSesame() {
 	document.getElementById('googlesignin').classList = 'hidden';
 	/*document.getElementById('body').classList = 'bgimg';*/
 }
+
+function toggle_night_mode() {
+	set_night_mode(!config['night_mode']);
+}
+
+function set_night_mode(state) {
+  if (state) {
+    document.body.classList.add('night-mode');
+  } else {
+    document.body.classList.remove('night-mode');
+  }
+  config['night_mode'] = state;
+  localStorage.thebutton_config = JSON.stringify(config);
+}
+
 /*
 function startChat() {
   var displayName = prompt("Please choose a nickname:", "Funny Cheetah");

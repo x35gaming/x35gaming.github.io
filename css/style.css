@@ -6,7 +6,30 @@
   background: url('img/abstract1.jpg');
 }
 */
-h1 {
+
+/* night mode stuff */
+body.night-mode {
+  background: black;
+  -webkit-filter: invert(1) hue-rotate(180deg);
+  filter: invert(1) hue-rotate(180deg);
+}
+
+#togBut {
+  transition: all 0.2s ease 0s;
+  float: right;
+}
+
+#togBut:hover {
+  background: black;
+  color: white;
+}
+
+#togBut:active {
+  background: black;
+  color: white;
+}
+
+\h1 {
   text-align: center;
   font-size: 2rem;
 }
@@ -15,12 +38,14 @@ h1 {
   font-size: small;
 }
 
+/* logout button stuff */
 #logout {
   float: right;
-  border-radius: 10px;
-  font-size: medium;
-  background-color: gainsboro;
-  cursor: pointer;
+}
+
+#logout:hover {
+  background-color: red;
+  color: white;
 }
 
 #signin-div {
@@ -29,9 +54,6 @@ h1 {
 
 #signinbutton {
   width: 220px;
-}
-
-#signinbutton:hover {
   cursor: pointer;
 }
 
