@@ -4,11 +4,10 @@ let sites = {
 	"hole": "https://hole-io.com/",
 	"worm": "https://wormate.io/",
 	"silver": "https://silvergames.com/",
+	"rider": "https://www.silvergames.com/en/rider-2/iframe/",
 	"blank": "about:blank",
 	"bing": "https://bing.com/"
 };
-
-/*"rider": "https://www.silvergames.com/en/rider-2/iframe/"*/
 
 function openSesame() {
 	document.getElementById('truediv').classList = 'visible';
