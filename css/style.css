@@ -48,6 +48,14 @@ body.night-mode {
   color: white;
 }
 
+#logout1 {
+  float: right;
+  border-radius: 10px;
+  font-size: medium;
+  background-color: gainsboro;
+  cursor: pointer;
+}
+
 #signin-div {
   text-align: -webkit-center;
 }

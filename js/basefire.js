@@ -37,3 +37,8 @@ document.getElementById('logout').addEventListener('click', () => {
 	firebase.auth().signOut();
 	location.reload();
 });
+
+document.getElementById('logout1').addEventListener('click', () => {
+	firebase.auth().signOut();
+	location.reload();
+});
