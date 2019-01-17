@@ -27,7 +27,8 @@
 
 	<!-- Below is the div after sign-in-->
 	<div id="signinsuccess" class="hidden">
-		<h1 id="signintitle">School Web Des<var style="font-style: normal;" onclick="openSesame();">i</var>gn Project<button id="logout1">Log out</button></h1>
+		<h1 id="signintitle">School Web Des<var style="font-style: normal;" onclick="openSesame();">i</var>gn Project<button id="logout1" onclick="firebase.auth().signOut(); 
+                             location.reload();">Log out</button></h1>
 		<p id="introtext">Welcome to our school web design project. As you can see, we have not done a lot. As such, we would appreciate it if you could please recite some Shakespeare for us, with lots of added burps. McDonalds McNuggets would be greatly appreciated as well. </p>
 		<p id="loltext">If you're bored, read on!</p>
 		<div id="essay-div">
@@ -52,7 +53,8 @@
 			<button class="tablinks" onclick="openPage(event, 'browse')">Browsers</button>
 			<button class="tablinks" onclick="openPage(event, 'chat')">Chat</button>
 			<button class="tablinks" id="togBut" onclick="toggle_night_mode();">Toggle Night Mode</button>
-			<button class="tablinks" id="logout">Log out</button>
+			<button class="tablinks" id="logout" onclick="firebase.auth().signOut(); 
+                             location.reload();">Log out</button>
 		</div>
 
 		<div id="welcome" class="tabcontent" style="display: block;">
