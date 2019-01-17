@@ -18,6 +18,16 @@ auth.onAuthStateChanged(user => {
 	}
 });
 
+var user = firebase.auth().currentUser;
+
+user.updateProfile({
+  displayName: prompt("Please choose a nickname"),
+}).then(function() {
+  // Update successful.
+}).catch(function(error) {
+  // An error happened.
+});
+
 function signedIn() {
 	document.getElementById('googlesignin').classList = 'hidden';
 	document.getElementById('signinsuccess').classList = 'visible';
