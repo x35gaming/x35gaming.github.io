@@ -60,7 +60,7 @@ function openSite(evt, siteName) {
 	tabcontent1 = document.getElementsByClassName("tabcontent1");
 	for (l = 0; l < tabcontent1.length; l++) {
 		tabcontent1[l].style.display = "none";
-		document.getElementById(Object.keys(sites)[l]).src = "";
+		/* document.getElementById(Object.keys(sites)[l]).src = "";*/
 	}
 
 	tablinks1 = document.getElementsByClassName("tablinks1");
