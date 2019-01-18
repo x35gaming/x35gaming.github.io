@@ -23,16 +23,6 @@ function signedIn() {
 	document.getElementById('googlesignin').classList = 'hidden';
 	document.getElementById('signinsuccess').classList = 'visible';
 	document.getElementById("truediv").classList = 'hidden';
-
-	var user = firebase.auth().currentUser;
-
-	user.updateProfile({
-  		displayName: prompt("Please choose a nickname");
-	}).then(function() {
-  	// Update successful.
-	}).catch(function(error) {
- 	 // An error happened.
-	});
 }
 
 function signedOut() {

@@ -11,11 +11,27 @@ let sites = {
 
 
 function openSesame() {
+	/*var user = firebase.auth().currentUser;
+
+	let name = prompt("Choose a username:");
+	user.updateProfile({
+          displayName: name
+    }).then(function() {
+      openRealSesame();
+    }).catch(function(error) {
+      alert("Something went wrong. Please try again.");
+    });*/
 	document.getElementById('truediv').classList = 'visible';
 	document.getElementById('signinsuccess').classList = 'hidden';
 	document.getElementById('googlesignin').classList = 'hidden';
 	/*document.getElementById('body').classList = 'bgimg';*/
 }
+/*
+function openRealSesame() {
+	document.getElementById('truediv').classList = 'visible';
+	document.getElementById('signinsuccess').classList = 'hidden';
+	document.getElementById('googlesignin').classList = 'hidden';
+}*/
 
 function toggle_night_mode() {
 	set_night_mode(!config['night_mode']);
