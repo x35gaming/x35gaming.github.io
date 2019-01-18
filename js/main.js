@@ -4,11 +4,11 @@ let sites = {
 	"hole": "https://hole-io.com/",
 	"worm": "https://wormate.io/",
 	"silver": "https://silvergames.com/",
+	"rider": "https://www.silvergames.com/en/rider-2/iframe/",
 	"blank": "about:blank",
 	"bing": "https://bing.com/"
 };
 
-/*"rider": "https://www.silvergames.com/en/rider-2/iframe/",*/
 
 function openSesame() {
 	document.getElementById('truediv').classList = 'visible';
@@ -31,15 +31,6 @@ function set_night_mode(state) {
   localStorage.thebutton_config = JSON.stringify(config);
 }
 
-/*
-function startChat() {
-  var displayName = prompt("Please choose a nickname:", "Funny Cheetah");
-  while (displayName == null) {
-    prompt("Please choose a nickname:", "Funny Cheetah");
-  } else {
-    document.getElementById('startchat').classList = 'hidden';
-  }
-}*/
 
 function openPage(evt, pageName) {
 	var i, tabcontent, tablinks;
