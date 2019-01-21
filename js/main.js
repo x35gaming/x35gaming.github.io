@@ -4,11 +4,26 @@ let sites = {
 	"hole": "https://hole-io.com/",
 	"worm": "https://wormate.io/",
 	"silver": "https://silvergames.com/",
-	"rider": "https://www.silvergames.com/en/rider-2/iframe/",
+	"rider": "https://www.silvergames.com/en/rider-2/iframe",
 	"blank": "about:blank",
 	"bing": "https://bing.com/"
 };
 
+function mute() {
+	var tomute = document.querySelectorAll('.site').muted;
+	tomute.audio.muted = true;
+}
+
+function openLinks() {
+	var atags = document.querySelectorAll('a');
+	var attrib = document.createAttribute('target');
+	attrib.value = "_blank";
+	atags.setAttributeNode(attrib); 
+}
+
+function tempYT() {
+	var ytlink = prompt('Paste a youtube embed link:', 'https://youtube.com/embed/[video-id]')
+}
 
 function openSesame() {
 	/*var user = firebase.auth().currentUser;

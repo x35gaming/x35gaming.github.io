@@ -29,6 +29,10 @@ body.night-mode {
   color: white;
 }
 
+#rider {
+  width: 60ex;
+  height: 80ex;
+}
 h1 {
   text-align: center;
   font-size: 2rem;
