@@ -7,7 +7,6 @@ let sites = {
 	"rider": "https://www.silvergames.com/en/rider-2/iframe",
 	"blank": "about:blank",
 	"bing": "https://bing.com/",
-	"netflix": "https://netflix.com"
 };
 
 function mute() {
