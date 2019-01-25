@@ -45,11 +45,12 @@
 		<div class="tab">
 			<button class="tablinks" onclick="openPage(event, 'welcome')">Welcome</button>
 			<button class="tablinks" onclick="openPage(event, 'about')">About</button>
-			<button class="tablinks" onclick="openPage(event, 'websites')">Websites</button>
+			<button class="tablinks" onclick="openPage(event, 'fun')">Fun!</button>
 			<button class="tablinks" onclick="openPage(event, 'youtube')">YouTube</button>
 			<button class="tablinks" onclick="openPage(event, 'count')">Count Down</button>
 			<button class="tablinks" onclick="openPage(event, 'browse')">Browsers</button>
 			<button class="tablinks" onclick="openPage(event, 'chat')">Chat</button>
+			<!--<button class="tablinks" onclick="openPage(event, 'embed')">Embed</button>-->
 			<button class="tablinks" id="togBut" onclick="toggle_night_mode();">Toggle Night Mode</button>
 			<button class="tablinks" id="logout">Log out</button>
 		</div>
@@ -99,7 +100,7 @@
 			<p style="font-size: xx-small">(There's no problem in giving them the url. Just watch them try to get in, fail, and rage quit)</p>
 		</div>
 
-		<div id="websites" class="tabcontent">
+		<div id="fun" class="tabcontent">
 			<div class="tab1">
 				<button class="tablinks1" onclick="openSite(event, 'blank')">Blank</button>
 				<button class="tablinks1" onclick="openSite(event, 'creatur')">Creatur.io</button>
@@ -176,11 +177,14 @@
 
 		</div>
 		
-		
+		<!--<div id="embed" class="tabcontent">
+			<button id="embedbut" onclick="embed()">Click to add site!</button>
+			<iframe id="embedfrm" class="hidden"></iframe>
+		</div>-->
+
 	</div>
 
 	<footer class="footer">&copy;2019 <a href="https://github.com/jcgter777/">jcgter777</a></footer>
 	<script defer="true" type="text/javascript" src="js/basefire.js"></script>
 	<script defer="true" type="text/javascript" src="js/main.js"></script>
-
 </body>

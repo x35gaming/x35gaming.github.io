@@ -21,6 +21,22 @@ function openLinks() {
 	atags.setAttributeNode(attrib); 
 }
 
+function embed() {
+	var url, h, w;
+    url = prompt("Website url"),
+    w = '-webkit-fill-available';
+    h = '80vmin';
+    prepareFrame()
+}
+
+function prepareFrame() {
+	var url, h, w;
+    var ifrm = document.getElementById('embedfrm');
+    ifrm.setAttribute("src", url),
+    document.body.appendChild(ifrm)
+    ifrm.classList = 'visible';
+}
+
 function tempYT() {
 	var ytlink = prompt('Paste a youtube embed link:', 'https://youtube.com/embed/[video-id]')
 }
