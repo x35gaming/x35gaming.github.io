@@ -20,7 +20,7 @@ function openLinks() {
 	attrib.value = "_blank";
 	atags.setAttributeNode(attrib); 
 }
-
+/*
 function embed() {
 	var url, h, w;
     url = prompt("Website url"),
@@ -36,7 +36,7 @@ function prepareFrame() {
     document.body.appendChild(ifrm)
     ifrm.classList = 'visible';
 }
-
+*/
 function tempYT() {
 	var ytlink = prompt('Paste a youtube embed link:', 'https://youtube.com/embed/[video-id]')
 }
